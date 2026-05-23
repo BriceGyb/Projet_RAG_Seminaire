@@ -1,0 +1,14 @@
+# Environnement Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# Variables d'environnement sensibles
+data/.env
+.streamlit/secrets.toml
+
+# Résultats générés
+eval_results.json
+benchmark_results.json

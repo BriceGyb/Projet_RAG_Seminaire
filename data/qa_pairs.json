@@ -1,0 +1,74 @@
+{
+  "qa_pairs": [
+    {
+      "id": "q1",
+      "question": "Selon le Code civil du Québec (CCQ-1991), quelles sont les conditions essentielles à la formation d'un contrat valide ?",
+      "expected_answer": "Selon l'article 1385 du Code civil du Québec, un contrat se forme par le seul échange des consentements entre des personnes capables de contracter. Les conditions essentielles sont : la capacité des parties, un consentement libre et éclairé, un objet certain et une cause licite. Le contrat est valide dès la rencontre des volontés, sans qu'un écrit soit requis sauf exception.",
+      "source_document": "CCQ-1991.pdf",
+      "relevant_chunk_keywords": ["consentement", "contrat", "capacité", "formation"]
+    },
+    {
+      "id": "q2",
+      "question": "Quels sont les vices du consentement reconnus par le Code civil du Québec (CCQ-1991) pouvant entraîner la nullité d'un contrat ?",
+      "expected_answer": "Les articles 1399 à 1408 du Code civil du Québec identifient trois vices du consentement : l'erreur, le dol et la crainte. Lorsqu'un vice est déterminant du consentement d'une partie, il emporte la nullité relative du contrat. Le dol suppose des manœuvres frauduleuses destinées à induire en erreur ; la crainte exige une menace sérieuse et injuste.",
+      "source_document": "CCQ-1991.pdf",
+      "relevant_chunk_keywords": ["erreur", "dol", "crainte", "nullité", "consentement"]
+    },
+    {
+      "id": "q3",
+      "question": "Comment le Code civil du Québec (CCQ-1991) définit-il la responsabilité civile extracontractuelle et quelles en sont les conditions ?",
+      "expected_answer": "L'article 1457 du Code civil du Québec dispose que toute personne a le devoir de respecter les règles de conduite qui s'imposent à elle et que le manquement à ce devoir oblige la personne fautive à réparer le préjudice causé. Les trois conditions cumulatives sont : une faute (manquement à une norme de conduite), un préjudice (corporel, moral ou matériel) et un lien de causalité direct entre la faute et le préjudice.",
+      "source_document": "CCQ-1991.pdf",
+      "relevant_chunk_keywords": ["responsabilité", "faute", "préjudice", "causalité"]
+    },
+    {
+      "id": "q4",
+      "question": "Quelle est la durée de la prescription extinctive de droit commun prévue par le Code civil du Québec (CCQ-1991) pour les actions personnelles ?",
+      "expected_answer": "L'article 2925 du Code civil du Québec établit que l'action qui tend à faire valoir un droit personnel se prescrit par trois ans. Ce délai court à compter du jour où le titulaire du droit d'action a connu ou aurait dû connaître les faits qui lui donnent naissance. Des délais spéciaux plus courts ou plus longs s'appliquent dans certaines matières expressément prévues par la loi.",
+      "source_document": "CCQ-1991.pdf",
+      "relevant_chunk_keywords": ["prescription", "délai", "trois ans", "action personnelle"]
+    },
+    {
+      "id": "q5",
+      "question": "Quelles obligations le Code civil du Québec (CCQ-1991) impose-t-il au vendeur en matière de garantie légale contre les vices cachés ?",
+      "expected_answer": "Les articles 1726 à 1731 du Code civil du Québec imposent au vendeur de garantir l'acheteur contre les vices cachés du bien vendu. Le vice doit être grave (rendre le bien impropre à l'usage auquel il est destiné ou en diminuer tellement l'utilité), caché au moment de la vente et antérieur à celle-ci. L'acheteur peut alors demander la résolution du contrat, une réduction du prix ou des dommages-intérêts.",
+      "source_document": "CCQ-1991.pdf",
+      "relevant_chunk_keywords": ["vice caché", "vendeur", "garantie", "résolution"]
+    },
+    {
+      "id": "q6",
+      "question": "Selon la Loi sur les tribunaux judiciaires (T-15.01), comment est organisée la Cour du Québec et quelle est sa compétence générale ?",
+      "expected_answer": "La Loi sur les tribunaux judiciaires organise la Cour du Québec en plusieurs chambres dont la Chambre civile, la Chambre criminelle et pénale et la Chambre de la jeunesse. La Cour du Québec est un tribunal de droit commun compétent pour entendre en première instance les causes civiles dont la valeur en litige est inférieure au seuil de compétence de la Cour supérieure, ainsi que les matières qui lui sont expressément attribuées par la loi.",
+      "source_document": "T-15.01.pdf",
+      "relevant_chunk_keywords": ["Cour du Québec", "compétence", "chambre", "tribunal"]
+    },
+    {
+      "id": "q7",
+      "question": "Quelles mesures de protection de la santé publique la Loi sur la santé publique (S-8) permet-elle d'adopter en situation d'urgence sanitaire ?",
+      "expected_answer": "La Loi sur la santé publique du Québec autorise le gouvernement à déclarer l'état d'urgence sanitaire lorsqu'une menace grave à la santé de la population est constatée. Cette déclaration confère au ministre de la Santé des pouvoirs exceptionnels : ordonner la fermeture de lieux, imposer des mesures de quarantaine ou d'isolement, réquisitionner des ressources et déroger temporairement à certaines dispositions législatives.",
+      "source_document": "S-8.pdf",
+      "relevant_chunk_keywords": ["urgence sanitaire", "mesure", "santé publique", "ministre"]
+    },
+    {
+      "id": "q8",
+      "question": "Quelles sont les obligations de déclaration des maladies imposées aux professionnels de la santé par la Loi sur la santé publique (S-8) ?",
+      "expected_answer": "La Loi sur la santé publique oblige les médecins, les directeurs d'établissements de santé et les responsables de laboratoires à déclarer au directeur de santé publique compétent toute maladie à déclaration obligatoire (MADO) dans les délais prescrits par règlement. Cette obligation de déclaration vise à permettre la surveillance épidémiologique, le contrôle des maladies infectieuses et la mise en œuvre de mesures de protection de la population.",
+      "source_document": "S-8.pdf",
+      "relevant_chunk_keywords": ["déclaration obligatoire", "maladie", "directeur de santé publique", "médecin"]
+    },
+    {
+      "id": "q9",
+      "question": "Quelles obligations linguistiques la loi fédérale n-11 impose-t-elle aux institutions fédérales à l'égard du public ?",
+      "expected_answer": "La loi fédérale n-11 sur les langues officielles garantit à tout membre du public le droit de communiquer avec les institutions fédérales et d'en recevoir les services dans la langue officielle de son choix, soit le français soit l'anglais, là où la demande est suffisante ou lorsque la nature du bureau le justifie. Les institutions fédérales sont tenues d'adopter des politiques actives pour assurer le respect de cette obligation et promouvoir l'égalité de statut des deux langues officielles.",
+      "source_document": "n-11.pdf",
+      "relevant_chunk_keywords": ["langue officielle", "institution fédérale", "français", "anglais"]
+    },
+    {
+      "id": "q10",
+      "question": "Quels pouvoirs d'inspection et de contrôle la loi fédérale f-8.4 confère-t-elle aux agents désignés pour assurer son application ?",
+      "expected_answer": "La loi fédérale f-8.4 habilite les inspecteurs désignés à pénétrer dans tout lieu visé par la loi, à prélever des échantillons, à examiner et à saisir des documents ou des biens, et à exiger la communication de tout renseignement nécessaire. Les personnes en charge des lieux sont tenues de prêter assistance aux inspecteurs. Tout entrave ou refus de coopérer constitue une infraction susceptible de sanctions pénales prévues par la loi.",
+      "source_document": "f-8.4.pdf",
+      "relevant_chunk_keywords": ["inspecteur", "inspection", "pouvoirs", "saisie"]
+    }
+  ]
+}
