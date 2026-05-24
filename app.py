@@ -17,36 +17,25 @@ st.set_page_config(
 
 IMPORTANCE_COLOR = {"haute": "🔴", "moyenne": "🟡", "faible": "🟢"}
 
-SALUTATIONS = {
-    "bonjour", "bonsoir", "salut", "hello", "hi", "hey", "coucou",
-    "bonjour!", "salut!", "hello!", "bonsoir!", "yo", "allo", "allô"
-}
 
-HORS_SUJET_KEYWORDS = [
-    "météo", "sport", "film", "musique", "recette", "cuisine",
-    "blague", "joke", "football", "basket", "comment tu vas",
-    "ça va", "ca va", "comment vas-tu", "qui es-tu", "qui êtes-vous",
-    "merci", "thank you", "thanks", "au revoir", "bye", "bonne journée"
-]
-
-
-def _est_hors_sujet(question: str) -> bool:
-    q = question.strip().lower().rstrip("!?.")
-    if q in SALUTATIONS:
-        return True
-    if len(q.split()) <= 3 and q in SALUTATIONS:
-        return True
-    for kw in HORS_SUJET_KEYWORDS:
-        if kw in q:
-            return True
-    return False
-
-
-def _reponse_hors_sujet(question: str) -> str:
-    q = question.strip().lower().rstrip("!?.")
-    if q in SALUTATIONS:
-        return "Bonjour ! Je suis votre assistant juridique. Posez-moi une question sur le contrat analysé — par exemple sur la validité d'une clause, les risques ou les articles de loi applicables."
-    return "Je suis un assistant juridique spécialisé dans l'analyse de contrats. Je ne peux répondre qu'aux questions relatives au contrat chargé et aux lois applicables."
+def _est_question_juridique(question: str) -> bool:
+    """Utilise le LLM comme filtre : détermine si la question mérite un appel RAG."""
+    from config import client, CHAT_MODEL
+    reponse = client.chat.completions.create(
+        model=CHAT_MODEL,
+        messages=[{
+            "role": "user",
+            "content": (
+                "Tu es un classificateur. Réponds uniquement par OUI ou NON.\n"
+                "La question suivante est-elle une question juridique relative à un contrat, "
+                "une clause, une loi ou un droit ? (salutations, remerciements, sujets hors droit = NON)\n\n"
+                f"Question : {question}"
+            )
+        }],
+        temperature=0.0,
+        max_tokens=5,
+    )
+    return "OUI" in reponse.choices[0].message.content.upper()
 
 
 # ── Sidebar ──────────────────────────────────────────────────────────────────
@@ -174,8 +163,8 @@ with tab_qa:
             st.markdown(question)
 
         with st.chat_message("assistant"):
-            if _est_hors_sujet(question):
-                reponse = _reponse_hors_sujet(question)
+            if not _est_question_juridique(question):
+                reponse = "Je suis un assistant juridique spécialisé dans l'analyse de contrats. Je ne peux répondre qu'aux questions relatives au contrat chargé et aux lois applicables."
                 st.markdown(reponse)
             else:
                 with st.spinner("Recherche juridique..."):
